@@ -1,0 +1,50 @@
+#TASK-1
+
+num = input("Enter a positive number: ")
+sum = 0
+if num.isdigit():
+    num=int(num)
+    num_2 = num
+    while num_2 > 0:
+      last_digit = num_2 % 10
+      sum += last_digit ** 3
+      num_2 //= 10
+    if num == sum:
+      print(num,"is an Armstrong number")
+    else:
+      print(num,"is not an Armstrong number")
+else:
+    print("It is an invalid entry. Don't use non-numeric, float, or negative values!")
+
+#TASK-2
+
+num=int(input("enter a positive number: ").strip())
+if num>0:
+    count=0
+    for i in range (1, num+1):
+        if num%i==0: 
+            count+=1
+        else:
+            count+=0
+    if count<3:
+        print("It is a prime number")
+    else:
+        print("It is not a prime number")
+else:
+    print("enter only a positive number!")
+
+#TASK3
+
+n_terms = 10 
+n_1 = 1  
+n_2 = 1  
+count = 0  
+my_list=[] 
+while count<n_terms:  
+    my_list.append(n_1)  
+    nth = n_1 + n_2 
+      
+    n_1 = n_2  
+    n_2 = nth  
+    count += 1
+print(my_list)
